@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* importando fonte externa no googleFonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* importando fonte baixada localmente: */
+@font-face {
+   font-family: "Android";
+   src: url(fontes/idroid.otf) format("opentype");
+   font-weight: normal;
+}
+
+:root{
+   --cor0:#ebe5c5;
+   --cor1:#2DE081;
+   --cor2:#48A172;
+   --cor3:#446151;
+
+   --fonte_padrao:Arial, Verdana, Helvetica, sans-serif;
+   --fonte_destaque:"Bebas Neue", sans-serif;
+   --fonte_android:"Android", cursive;
+}
+
+*{
+   margin: 0px;
+   padding: 0px;
+}
+html,body{
+   width: 100vw;
+   height: 100vh;
+   font-family: var(--fonte_padrao);
+   background-color: var(--cor0);
+}
+header{
+   padding: 10px;
+   margin-bottom: 15px;
+   text-align: center;
+   background-image: linear-gradient(to right, var(--cor2), var(--cor3));
+   color: white;
+   box-shadow: 1px 1px 1px var(--cor3);
+}
+header > h1{
+   font-family: var(--fonte_destaque);
+   font-size: 37px;
+   margin: 10px;
+   text-shadow: 1px 1px 1px black;
+}
+header > p{
+   font-size: 18px;
+   margin-right: 5px;
+   margin-left: 5px;
+   margin-bottom: 10px;
+   text-shadow: 1px 1px 1px black;
+}
+header > nav{
+   text-align: left;
+   margin-top: 25px;
+   margin-bottom: 3px;
+   
+}
+header > nav a{
+   text-decoration: none;
+   padding: 8px;
+   border-radius: 18px;
+   margin-right: 10px;
+   background-color: var(--cor3);
+   color: white;
+   text-shadow: 1px 1px 1px black;
+
+   /* implementando animação: */
+   transition-property: all;
+   transition-duration: .6s;
+   transition-timing-function: ease-in-out;
+}
+header > nav a:hover{
+   background-color: var(--cor2);
+}
+
+main{
+   margin: auto;
+   padding: 15px;
+   width: 80vw;
+   border-radius: 18px;
+   margin-bottom: 10px;
+
+   background-color: white;
+   box-shadow: 0px 1px 1px black;
+}
+main > h2{
+   font-family: var(--fonte_android);
+   font-size: 32px;
+   margin: 8px 0px;
+   color: var(--cor3);
+
+   text-shadow: 1px 1px 1px var(--cor1);
+}
+main > p{
+   text-align: justify;
+   text-indent: 25px;
+   margin:10px 15px;
+   word-spacing: 3px;
+   line-height: 25px;
+}
+main > p > strong{
+   color: var(--cor3);
+   text-shadow: 1px 1px 1px black;
+   font-weight: bolder;
+}
+main > p > a{
+   text-decoration: none;
+   font-weight: bolder;
+   padding: 1px;
+   color: var(--cor3);
+   background-color: var(--cor1);
+}
+main > p > a:hover{
+   text-decoration: underline;
+}
+main > h3{
+   font-family: var(--fonte_android);
+   font-size: 30px;
+   background-image: linear-gradient(to right, var(--cor2), white);
+   color: var(--cor3);
+}
+main > div.imagem{
+   height: 400px;
+   position: relative;
+}
+main > div.imagem > picture > img{
+   padding: 15px;
+   width: 320px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+main > div.iframe{
+   padding: 15px;
+   height: 350px;
+}
+main > div.iframe > iframe{
+   width: 70vw;
+   height: 345px;
+   display: block;
+   margin: auto; 
+}
+main > section{
+   border-radius: 10px;
+   background-color: var(--cor2);
+   box-shadow: 0px 1px 1px black;
+}
+main > section > article > h4{
+   text-align:left;
+   padding:10px;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   margin-bottom: 10px;
+   background-color: var(--cor3);
+   color: white;
+}
+main > section > article p{
+   text-align: justify;
+   text-indent: 25px;
+   margin: 10px 15px;
+}
+main > section > article > p > strong{
+   color: var(--cor3);
+   text-shadow: 1px 1px 1px black;
+   font-weight: bolder;
+}
+main > section > article > p > a{
+   text-decoration: none;
+   font-weight: bolder;
+   padding: 1px;
+   color: var(--cor3);
+   background-color: var(--cor1);
+}
+main > section > article > p > a:hover{
+   text-decoration: underline;
+} 
+main > section > article > ul{
+   text-align: left;
+   list-style-position: inside;
+   columns: 2;
+   padding: 10px;
+}
+footer{
+   text-align: center;
+   padding: 8px;
+   color: white;
+   background-image: linear-gradient(to right, var(--cor2), var(--cor3));;
+}
+footer > p > a{
+   text-decoration: none;
+   color: white;
+   font-weight: bolder;
+}
+footer > p > a:hover{
+   text-decoration: underline;
+}
