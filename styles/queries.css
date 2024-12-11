@@ -7,6 +7,16 @@
 4-telas-grandes: min-width:1400px */
 
 @media screen and (min-width:769px){
+    html,body{
+        width: 99.5%;
+        height: 100%;
+    }
+    header > nav{
+        margin-left: 25px;
+    }
+    header > nav a{
+        margin-right: 15px;
+    }
     main > div.imagem > picture > img{
         width: 75vw;
         height: 30vh;
